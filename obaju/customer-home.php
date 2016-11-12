@@ -226,11 +226,11 @@
                                         if((mysqli_num_rows($rst))>0){
                                             while($row = mysqli_fetch_assoc($rst)){
                                                 echo "<tr>";
-                                                echo "<td>".$row['id']."</td>";
+                                                echo "<td>".$row['oNo']."</td>";
                                                 echo "<td>".$row['date']."</td>";
                                                 echo "<td>".$row['dID']."</td>";
                                                 echo "<td>".$row['eTotal']."</td>";
-                                                if($row['status']=='yes'){
+                                                if($row['status']=='on'){
                                                     if($row['dDate']==''){
                                                         echo "<td><span class='label label-info'>Being prepared</span></td>";
                                                     }
