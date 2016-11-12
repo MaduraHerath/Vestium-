@@ -18,6 +18,6 @@
 	$qry1 = mysqli_query($conn,$sql1);
 
 	if($qry1){
-		header("Location:customer-home.html");
+		header("Location:customer-home.php");
 	}
 ?>

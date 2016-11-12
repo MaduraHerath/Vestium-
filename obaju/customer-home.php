@@ -219,8 +219,10 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        $sql = "SELECT * FROM order WHERE bID = '$id'";
+                                        $sql = "SELECT * FROM orders WHERE bID = '$id'";
                                         $rst = mysqli_query($conn,$sql);
+                                        // if($rst){echo 1;}
+                                        // else{echo 0;}
                                         if((mysqli_num_rows($rst))>0){
                                             while($row = mysqli_fetch_assoc($rst)){
                                                 echo "<tr>";
@@ -228,54 +230,22 @@
                                                 echo "<td>".$row['date']."</td>";
                                                 echo "<td>".$row['dID']."</td>";
                                                 echo "<td>".$row['eTotal']."</td>";
+                                                if($row['status']=='yes'){
+                                                    if($row['dDate']==''){
+                                                        echo "<td><span class='label label-info'>Being prepared</span></td>";
+                                                    }
+                                                    else{
+                                                        echo "<td><span class='label label-success'>Received</span></td>";
+                                                    }
+                                                }
+                                                else{
+                                                    echo "<td><span class='label label-danger'>Cancelled</span></td>";
+                                                }
+                                                echo "<td><a href='customer-order.html' class='btn btn-primary btn-sm'>View</a></td>";
+                                                echo "</tr>";
                                             }
                                         }
                                     ?>
-                                    <tr>
-                                        <th># 1735</th>
-                                        <td>22/06/2013</td>
-                                        <td>$ 150.00</td>
-                                        <td><span class="label label-info">Being prepared</span>
-                                        </td>
-                                        <td><a href="customer-order.html" class="btn btn-primary btn-sm">View</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th># 1735</th>
-                                        <td>22/06/2013</td>
-                                        <td>$ 150.00</td>
-                                        <td><span class="label label-info">Being prepared</span>
-                                        </td>
-                                        <td><a href="customer-order.html" class="btn btn-primary btn-sm">View</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th># 1735</th>
-                                        <td>22/06/2013</td>
-                                        <td>$ 150.00</td>
-                                        <td><span class="label label-success">Received</span>
-                                        </td>
-                                        <td><a href="customer-order.html" class="btn btn-primary btn-sm">View</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th># 1735</th>
-                                        <td>22/06/2013</td>
-                                        <td>$ 150.00</td>
-                                        <td><span class="label label-danger">Cancelled</span>
-                                        </td>
-                                        <td><a href="customer-order.html" class="btn btn-primary btn-sm">View</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th># 1735</th>
-                                        <td>22/06/2013</td>
-                                        <td>$ 150.00</td>
-                                        <td><span class="label label-warning">On hold</span>
-                                        </td>
-                                        <td><a href="customer-order.html" class="btn btn-primary btn-sm">View</a>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
