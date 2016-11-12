@@ -176,7 +176,7 @@
                     </div>
                 </div>
 
-                <form>
+                <form action="insert.php" method="post">
                 <div class="col-md-8">
                     <div class="box">
                         
@@ -187,13 +187,13 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="firstname">Firstname</label>
-                                        <input type="text" class="form-control" id="firstname">
+                                        <input type="text" class="form-control" id="firstname" name="firstname" input required="required">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="lastname">Lastname</label>
-                                        <input type="text" class="form-control" id="lastname">
+                                        <input type="text" class="form-control" id="lastname" name="lastname" input required="required">
                                     </div>
                                 </div>
                             </div>
@@ -202,14 +202,14 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="company">Mobile Number</label>
-                                        <input type="text" class="form-control" id="company">
+                                        <label for="tele">Mobile Number</label>
+                                        <input type="text" class="form-control" name="tele" input required="required">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="street">City</label>
-                                        <input type="text" class="form-control" id="street">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" name="city">
                                     </div>
                                 </div>
                             </div>
@@ -218,8 +218,8 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label for="street">Address</label>
-                                        <input type="text" class="form-control" id="street">
+                                        <label for="adrs">Address</label>
+                                        <input type="text" class="form-control" name="adrs">
                                     </div>
                                 </div>
                             </div>
@@ -233,11 +233,11 @@
                             <div class="row">
                                 <div class="col-sm-8">
                                     <div class="form-group">
-                                        <label for="state" style="padding-top: 10%;">Payment Method</label>
+                                        <label for="pType" style="padding-top: 10%;">Payment Method</label>
                                         <div class="radio">
-                                            <label style="margin-left:10%;"><input type="radio" name="sex" value="Male" input required="required"> Visa</label><br>
-                                            <label style="margin-left:10%;"><input type="radio" name="sex" value="Female" input required="required"> Master</label><br> 
-                                            <label style="margin-left:10%;"><input type="radio" name="sex" value="Female" input required="required"> Add Later</label><br><br><br>
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="Visa" input required="required"> Visa</label><br>
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="Master" input required="required"> Master</label><br> 
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="" input required="required"> Add Later</label><br><br><br>
                                         </div>
                                         <br>
                                     </div>
