@@ -65,80 +65,8 @@
                     </li>
                     <li class="dropdown yamm-fw">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Contact US <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="yamm-content">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h5>Clothing</h5>
-                                            <ul>
-                                                <li><a href="category.html">T-shirts</a>
-                                                </li>
-                                                <li><a href="category.html">Shirts</a>
-                                                </li>
-                                                <li><a href="category.html">Pants</a>
-                                                </li>
-                                                <li><a href="category.html">Accessories</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Shoes</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Accessories</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Featured</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.yamm-content -->
-                            </li>
-                        </ul>
                     </li>
-                    <li><a href="#">Get Experience</a>
+                    <li><a href="camerafiton/samples/shoe_configurator/shoe.html">Get Experience</a>
                     </li>                  
                 </ul>
 
@@ -205,7 +133,44 @@
                 <div class="col-md-9" id="wishlist">
 
                     <div class="row products">
+                        <div class="box" style="margin-left: 2.3%; margin-right: 2.3%;">
+                                <h4>Select your design type here</h4>
+                                <p class="buttons" style="float:right; margin-top:-3.5%;">
+                                    <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Design your own</a>
+                                </p>
+                        </div>
+                        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
 
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="Login">Select Your Cloth</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="radio">
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="Shirt" input required="required"> Men - Shirt</label><br>
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="TShirt" input required="required"> Men - T-Shirt</label><br> 
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="Trouser" input required="required"> Men - Trouser</label><br>
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="Shoe" input required="required"> Men - Shoe</label><br>
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="Frock" input required="required"> Women - Frock</label><br>
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="Skirt" input required="required"> Women - Skirt</label><br>
+                                            <label style="margin-left:10%;"><input type="radio" name="pType" value="Blouse" input required="required"> Women - Blouse</label><br>
+                                </div>
+                                <a onclick="view()" class="btn btn-primary">Go</a>
+                                <script>
+                                    function view(){
+                                        var val = $("[name='pType']").attr('value');
+                                        if(val=="Shirt"){
+                                            window.location = "camerafiton/samples/shirt_configurator/index.html";
+                                        }else if(val=="Shoe"){
+                                            window.location = "camerafiton/samples/shoe_configurator/shoe.html";
+                                        }
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                         <div class="col-md-6 col-sm-4">
                             <div class="product">
                                 <div class="flip-container">
