@@ -1,4 +1,5 @@
 <?php
+    //$id1 = $_SESSION['id'];
     $id = 1;
     include_once('config.php');
 ?>
@@ -62,82 +63,10 @@
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="index.html">Home</a>
+                    <li class="active"><a href="customer-home.php">Home</a>
                     </li>
-                    <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Contact US <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="yamm-content">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h5>Clothing</h5>
-                                            <ul>
-                                                <li><a href="category.html">T-shirts</a>
-                                                </li>
-                                                <li><a href="category.html">Shirts</a>
-                                                </li>
-                                                <li><a href="category.html">Pants</a>
-                                                </li>
-                                                <li><a href="category.html">Accessories</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Shoes</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Accessories</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Featured</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.yamm-content -->
-                            </li>
-                        </ul>
+                    <li class="">
+                        <a href="contact.html" class="" data-toggle="" data-hover="" data-delay="200">Contact US</a>
                     </li>
                     <li><a href="#">Get Experience</a>
                     </li>                  
@@ -150,7 +79,7 @@
 
                 <div class="navbar-collapse collapse right" id="basket-overview">
                     <div class="dropdown yamm-fw">
-                        <a href="index.html" class="btn btn-primary navbar-btn" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Sign Out </a>
+                        <a href="index.html" class="btn btn-primary navbar-btn">Sign Out </a>
                     </div>
                 </div>
             </div>
@@ -229,7 +158,7 @@
                                                 echo "<td>".$row['oNo']."</td>";
                                                 echo "<td>".$row['date']."</td>";
                                                 echo "<td>".$row['dID']."</td>";
-                                                echo "<td>".$row['eTotal']."</td>";
+                                                echo "<td>Rs. ".$row['eTotal']."</td>";
                                                 if($row['status']=='on'){
                                                     if($row['dDate']==''){
                                                         echo "<td><span class='label label-info'>Being prepared</span></td>";
@@ -241,7 +170,8 @@
                                                 else{
                                                     echo "<td><span class='label label-danger'>Cancelled</span></td>";
                                                 }
-                                                echo "<td><a href='customer-order.html' class='btn btn-primary btn-sm'>View</a></td>";
+                                                $a = $row['oNo'];
+                                                echo "<td><a href='customer-order.php?id=$a' class='btn btn-primary btn-sm'>View</a></td>";
                                                 echo "</tr>";
                                             }
                                         }
