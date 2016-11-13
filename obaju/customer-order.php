@@ -142,7 +142,7 @@
                                     <a href="customer-orders.html"><i class="fa fa-list"></i> My orders</a>
                                 </li>
                                 <li>
-                                    <a href="customer-wishlist.html"><i class="fa fa-heart"></i> My wishlist</a>
+                                    <a href="customer-wishlist.html"><i class="fa fa-shopping-cart"></i> Shop Now</a>
                                 </li>
                                 <li>
                                     <a href="customer-account.html"><i class="fa fa-user"></i> My account</a>
